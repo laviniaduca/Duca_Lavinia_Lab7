@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Duca_Lavinia_Lab7.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="cat.jpg"
+                SemanticProperties.Description="Cute cat picture."
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Banana Bread Recipe"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Butter an 8x4-inch loaf pan. In a mixing bowl, mash the ripe bananas with a fork until completely smooth. Stir the melted butter into the mashed bananas. Mix in the baking soda and salt. Stir in the sugar, beaten egg, and vanilla extract. Mix in the flour. Pour the batter into your prepared loaf pan and bake for 55 to 65 minutes at 350°F (175°C). If the outside of the loaf is browned but the center is still wet, loosely tent the loaf with foil and continue baking until the loaf is fully baked. Remove from oven and let cool in the pan for a few minutes. Then remove the banana bread from the pan and let cool completely before serving. Slice and serve."
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Text about a recipe for banana bread."
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Click me"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
