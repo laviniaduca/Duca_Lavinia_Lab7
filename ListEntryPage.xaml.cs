@@ -6,13 +6,20 @@ public partial class ListEntryPage : ContentPage
 {
 	public ListEntryPage()
 	{
-		InitializeComponent();
+        InitializeComponent();
 	}
 
     protected override async void OnAppearing()
     {
         base.OnAppearing();
-        listView.ItemsSource = await App.Database.GetShopListsAsync();
+        try
+        {
+            listView.ItemsSource = await App.Database.GetShopListsAsync();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error retrieving shopping lists: {ex}");
+        }
     }
 
     async void OnShopListAddedClicked(object sender, EventArgs e)
